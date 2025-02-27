@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-white: #ffffff;
+  --color-light: #d1f2e1;
+  --color-dark: #1b1e1c;
+  --color-primary: #124c4a;
+  --color-secondary: #c34e81;
+  --color-info: #dd1a59;
+  --color-success: #109c43;
+  --color-warning: #ebc512;
+  --color-danger: #ef0734;
+
+  --font-sans: 'Inter', 'sans-serif';
+  --font-display: 'Manrope', 'sans-serif';
+
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+
+  --backdrop-blur-xs: 2px;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white min-h-screen;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/5 border border-white/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-secondary to-info bg-clip-text text-transparent;
+  }
+
+  .gradient-border {
+    @apply border-2 border-transparent bg-gradient-to-r from-secondary to-info;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .grid-pattern {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
+
+.frosted-glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(195, 78, 129, 0.5),
+               0 0 20px rgba(195, 78, 129, 0.3),
+               0 0 30px rgba(195, 78, 129, 0.1);
+}
+
+.gradient-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, theme('colors.secondary'), transparent);
+}
+
+.gradient-line-light {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, theme('colors.light'), transparent);
+}
+
+.gradient-line-horizontal {
+  width: 1px;
+  background: linear-gradient(0deg, transparent, theme('colors.secondary'), transparent);
+}
+
+.test {
+  border: 1px dotted red;
+}

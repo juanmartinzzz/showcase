@@ -1,0 +1,28 @@
+# Environment variables
+.env
+.env.dev
+.env.prod
+
+
+# Vite files
+.vite
+build
+dist
+
+
+# Firebase files
+firebase.json
+.firebase
+
+
+# Generation texts
+generation
+
+
+# Node modules
+node_modules
+
+
+# OS and IDE files
+.DS_Store
+.vscode
