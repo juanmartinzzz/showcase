@@ -3,6 +3,8 @@ import { Briefcase, Calendar } from 'lucide-react'
 
 const experiences = [
   {
+    yearFrom: '2025',
+    yearTo: 'Present',
     title: 'Current Saga: Blue Collar Hero 🎖️',
     company: 'Flow Kaching + Invoice Ally',
     sectionOneTitle: 'My vision',
@@ -17,7 +19,9 @@ const experiences = [
     ]
   },
   {
-    title: 'Ad Exchange Product Guru Era 💰',
+    yearFrom: '2020',
+    yearTo: '2024',
+    title: 'Ad Exchange Guru Era 💰',
     company: 'Sharethrough',
     sectionOneTitle: 'Led the charge on',
     sectionOneThings: [
@@ -31,6 +35,8 @@ const experiences = [
     ]
   },
   {
+    yearFrom: '2019',
+    yearTo: '2020',
     title: 'Double Life in Montréal 🍁',
     company: 'District M + Rolls.co',
     sectionOneTitle: 'Rocking it as',
@@ -46,6 +52,8 @@ const experiences = [
     ]
   },
   {
+    yearFrom: '2018',
+    yearTo: '2019',
     title: 'My California Agency Phase 🌴',
     company: 'FullStack Labs INC',
     sectionOneTitle: 'My roles',
@@ -61,7 +69,9 @@ const experiences = [
     ]
   },
   {
-    title: 'Logistics Kingpin Era 👑',
+    yearFrom: '2013',
+    yearTo: '2018',
+    title: 'Cargo Logistics Kingpin 👑',
     company: 'Champion Air Cargo',
     sectionOneTitle: 'My domain included',
     sectionOneThings: [
@@ -75,6 +85,8 @@ const experiences = [
     ]
   },
   {
+    yearFrom: '2011',
+    yearTo: '2013',
     title: 'The Oracle Wrestling Championship 🤼‍♂️',
     company: 'SOAIN LTD',
     sectionOneTitle: 'My mission',
@@ -99,6 +111,8 @@ const ExperienceV2 = () => {
         {experiences.map((experience, index) => (
           <div className={`w-full md:w-[66vw] flex ${index % 2 === 0 ? 'self-start' : 'self-end'}`} key={index}>
             <div className="flex flex-col w-1/4 md:justify-center text-md md:text-2xl">
+              <p className="text-sm text-warning text-center">{experience.yearFrom} - {experience.yearTo}</p>
+
               <h3 className="font-bold gradient-text text-center">{experience.title}</h3>
 
               <p className="text-warning text-center">@</p>
